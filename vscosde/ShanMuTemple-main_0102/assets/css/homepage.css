@@ -1,3 +1,7 @@
+.body {
+    font-size: 16px;
+}
+
 .header {
     width: 100%;
     height: 80px;
@@ -10,6 +14,12 @@
     background-color: #fff;
     z-index: 2;
 }
+
+.name_of_chruch {
+    flex:2
+   
+}
+
 
 .header .wrap-header-items {
     width: 500px;
@@ -35,6 +45,8 @@
     font-weight: 900;
 }
 
+
+
 .header .wrap-header-items .header-item:hover::after {
     height: 1px;
 }
@@ -45,12 +57,16 @@
     margin-top: 80px;
     position: relative;
     margin-bottom: 50px;
+    /* background-image: url(assets/images/homepage/homepage_banner.jpg); */
+    /* background-size: cover; */
 }
+
+
 
 .wrap-titlebar .titlebar {
     width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,27 +75,22 @@
     color: #fff;
 }
 
-.wrap-titlebar .background {
-    width: 100%;
-    height: 200px;
+.homepage_banner::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--background1);
-    background-image: url("/assets/images/scene.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.wrap-titlebar .background::after {
-    content: '';
     width: 100%;
     height: 100%;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.279);
 }
 
+.homepage_banner {
+/* 為甚麼背景圖片沒有跟著縮放? */
+    width:100%;
+    height: 100%;
+    display: flex;
+}
 
 .container {
     width: 100%;
@@ -87,12 +98,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 50px;
     /* align-items: center; */
     position: relative;
 }
 
 
+
+
+
 .footer {
+    position: relative;
     width: 100%;
     height: 80px;
     padding: 20px;
